@@ -1,0 +1,22 @@
+WARNING: package com.apple.eio not in java.desktop
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by org.netbeans.TopSecurityManager (file:/snap/netbeans/69/netbeans/platform/lib/boot.jar)
+WARNING: Please consider reporting this to the maintainers of org.netbeans.TopSecurityManager
+WARNING: System::setSecurityManager will be removed in a future release
+WARNING: package com.apple.eio not in java.desktop
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by org.netbeans.TopSecurityManager (file:/snap/netbeans/69/netbeans/platform/lib/boot.jar)
+WARNING: Please consider reporting this to the maintainers of org.netbeans.TopSecurityManager
+WARNING: System::setSecurityManager will be removed in a future release
+CompileCommand: exclude com/intellij/openapi/vfs/impl/FilePartNodeRoot.trieDescend bool exclude = true
+Info  | RdCoroutineScope          | 26:JobScheduler FJ pool 6/11 | RdCoroutineHost overridden 
+2022-09-30 09:56:08,081 [  11832]   WARN - #c.i.o.e.m.t.ExternalSystemTaskId - No project found for RESOLVE_PROJECT:0
+2022-09-30 09:56:08,169 [  11920]   WARN - #c.i.o.e.m.t.ExternalSystemTaskId - No project found for RESOLVE_PROJECT:0
+Initialize stderr logger, severity=LOGSEVERITY_DISABLE
+2022-09-30 09:56:11,180 [  14931]   WARN - #c.i.o.a.i.ActionUpdater - 1786 ms to grab EDT for BackAction#update@MainToolbar (com.intellij.ide.actions.BackAction)
+2022-09-30 09:56:14,010 [  17761]   WARN - #c.i.o.v.ExternallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project queues
+2022-09-30 09:56:16,531 [  20282]   WARN - #c.i.o.v.ExternallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project queues
+2022-09-30 09:56:49,404 [  53155]   WARN - #c.i.o.v.ExternallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project queue
+2022-09-30 09:59:10,893 [ 194644]   WARN - #c.i.o.v.ExternallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project queue
+2022-09-30 09:59:11,431 [ 195182]   WARN - #c.i.u.x.Binding - no accessors for org.jetbrains.idea.devkit.inspections.missingApi.resolve.LibrariesWithIntellijClassesState
+2022-09-30 10:07:09,100 [ 672851]   WARN - #c.i.u.x.Binding - no accessors for org.jetbrains.idea.perforce.perforce.ConnectionId
