@@ -14,7 +14,6 @@ class App {
         Map<String, Integer> result = new HashMap<>();
 
         MaxThread maxThread = new MaxThread(numgers);
-
         MinThread minThread = new MinThread(numgers);
 
         maxThread.start();
@@ -22,14 +21,11 @@ class App {
 
         try {
             maxThread.join();
-        } catch (InterruptedException ex) {
-            Logger.getLogger("Поток \"maxThread\" был прерван");
-        }
-
-        try {
+            LOGGER.log(Level.INFO, "Поток " + minThread.getName() + " остановился");
             minThread.join();
+            LOGGER.log(Level.INFO, "Поток " + maxThread.getName() + " остановился");
         } catch (InterruptedException ex) {
-            Logger.getLogger("Поток \"minThread\" был прерван");
+            Logger.getLogger("Поток был прерван");
         }
 
         result.put("max", maxThread.getMaxNumber());
