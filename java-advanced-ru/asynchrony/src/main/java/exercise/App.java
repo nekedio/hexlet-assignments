@@ -14,7 +14,7 @@ class App {
     // BEGIN
     public synchronized static CompletableFuture<String> unionFiles(String file1, String file2, String newFile) {
 
-        return CompletableFuture.supplyAsync(() -> {
+        CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> {
 
             Path path1 = Paths.get(file1);
 
@@ -26,6 +26,11 @@ class App {
                 System.out.println("NoSuchFileException");
             }
 
+            return text1;
+        });
+
+        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {
+
             Path path2 = Paths.get(file2);
 
             String text2 = "";
@@ -36,16 +41,22 @@ class App {
                 System.out.println("NoSuchFileException");
             }
 
+            return text2;
+
+        });
+
+        return future1.thenCombine(future2, (f1, f2) -> {
+
             Path newPath = Paths.get(newFile);
             try {
                 Files.deleteIfExists(newPath);
-                Files.write(newPath, (text1 + text2).getBytes(), StandardOpenOption.CREATE);
+                Files.write(newPath, (f1 + f2).getBytes(), StandardOpenOption.CREATE);
             } catch (IOException ex) {
                 System.out.println("NoSuchFileException");
             }
 
-            return "Result of async computation";
-        }).exceptionally(ex -> "Ошибка! \"" + ex.getMessage() + "\"");
+            return "SUCCESS";
+        });
     }
     // END
 
